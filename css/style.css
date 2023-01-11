@@ -1,0 +1,212 @@
+:root {
+    --primary-color: rgb(255, 0, 120);
+    --secondary-color: rgb(110, 0, 255);
+    --dark-color: rgb(15, 15, 15);
+    --light-color: #ddd;
+    --font-pixel: 'Press Start 2P', cursive;
+    --font-basic: 'Titillium Web', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+body, html {
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(to right,
+        var(--secondary-color),
+        var(--primary-color),
+        var(--secondary-color));
+    background-size: 200%;
+    font-family: var(--font-basic);
+    color: #fff;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+
+.content {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+}
+#navbar {
+    position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 5;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: var(--font-pixel);
+    font-size: .8rem;
+
+}
+
+.navbar h2:hover {
+    transform: scale(1.1);
+    transition: transform .5s ease;
+}
+
+
+.navbar h2 span:nth-child(odd) {
+    color: var(--primary-color);
+}
+
+#navbar ul li {
+    display: inline-block;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+#navbar ul li:hover {
+    color:  var(--primary-color);
+}
+
+#navbar .close-menu {
+    width: 200px;
+}
+
+.centered {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#tiles {
+    height: calc(100vh - 1px);
+    width: calc(100vw - 1px);
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.tile {
+    cursor: pointer;
+    position: relative;
+}
+
+.tile:hover:before {
+        opacity: 0;
+        transition: opacity .01s ease-in;
+}
+
+.tile:before {
+    background-color: var(--dark-color);
+    content: "";
+    inset: 0.5px;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#title {
+    color: white;
+    font-family: var(--font-basic);
+    font-size: 5vw;
+    margin: 0px;
+    pointer-events: none;
+    width: 50vw;
+    z-index: 3;
+    overflow: hidden;
+}
+
+#title>.fancy {
+    color: var(--primary-color);
+    font-family: var(--font-pixel);
+    font-size: 1em;
+    line-height: 0.9em;
+}
+
+.test {
+    width: 100vw;
+    height: 70vh;
+}
+
+/* MY SKILLS */
+
+.mySkills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 10vw;
+    z-index: 3;
+}
+
+.mySkills h1 {
+    grid-column: 1 / span 3;
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    line-height: 1.3;
+    font-family: var(--font-pixel);
+}
+
+.mySkills h1 span {
+    animation-name: opacityChange;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+    @keyframes opacityChange {
+    0% {opacity: 1;}
+
+    89% {opacity: 1;}
+    90% {opacity: 0;}
+
+
+    100% {opacity: 0;}
+    }
+
+.mySkills .box {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem;
+    border-image: linear-gradient( var(--primary-color), var(--secondary-color)) 30;
+    border-width: 1px;
+    border-style: solid;
+
+}
+
+.mySkills .box * {
+    margin: 1rem 0;
+}
+
+.mySkills .box h2 {
+    font-family: var(--font-pixel);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.mySkills .box p {
+    padding: 1rem 2rem;
+}
+
+.decorativeWord {
+    font-size: 20rem;
+    position: relative;
+    z-index: 1;
+    transform: translate(50%, -50%);
+}
