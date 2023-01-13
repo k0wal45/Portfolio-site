@@ -7,6 +7,7 @@
     <title>Web Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e36e94fbdf.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -17,10 +18,10 @@
             <nav class="navbar">
                 <h2>k0wal<span>45</span><span>.</span><span>_</span></h2>
                 <ul>
-                    <li><a href="#test">// About</a></li>
-                    <li>// My Skills</li>
-                    <li>// Contact</li>
-                    <li>// Experience</li>
+                    <li><a href="#mySkills">// My Skills</a></li>
+                    <li><a href="#experience">// Experience</a></li>
+                    <li><a href="#about">// About</a></li>
+                    <li><a href="#conatct">// Contact</a></li>
                 </ul>
                 <div class="close-menu"></div>
             </nav>
@@ -35,35 +36,67 @@
 
     <section id="mySkills" class="mySkills bg-dark">
         <h1><span>-</span><pre> </pre> My Skills</h1>
-        <div class="box">
-                <i class="fa-sharp fa-solid fa-paint-roller fa-3x"></i>
+        <div data-aos="fade-right" data-aos-delay="300" class="box">
+                
                 <h2>Graphics & Design</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti enim exercitationem animi voluptatibus aspernatur nisi?  </p>
         </div>
-        <div class="box">
-                <i class="fa-sharp fa-solid fa-code fa-3x"></i>
+        <div data-aos="fade-up" data-aos-delay="100" class="box">
+
                 <h2>Web Development</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti enim exercitationem animi voluptatibus aspernatur nisi?     </p>
         </div>
-        <div class="box">
-                <i class="fa-sharp fa-solid fa-share-from-square fa-3x"></i>
+        <div data-aos="fade-left" data-aos-delay="500" class="box">
+
                 <h2>SocialMedia Managment</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti enim exercitationem animi voluptatibus aspernatur nisi?     </p>
         </div>
     </section>
 
-    <section class="decorativeWord bg-dark">
-        <h1>WORK</h1>
+    <section id="experience" class="bg-dark">
+        <h1><span>-</span><pre> </pre> Experience</h1>
+        <div id="fisrtBoxBtn" class="exBox">
+            <h2>Intership in Kyndryl</h2>
+            <div class="clickbox"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+        </div>
+
+            <sectionn class="firstBox">
+                
+            </sectionn>
+
+        <div id="secondBoxBtn" class="exBox">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <div class="clickbox"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+        </div>
+
+            <sectionn class="secondBox">
+                
+            </sectionn>
+
+        <div id="thirdBoxBtn" class="exBox">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <div class="clickbox"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+        </div>
+
+            <sectionn class="thirdBox">
+                
+            </sectionn>
+
     </section>
 
-    <section class="test bg-dark"></section>
+    <section class="test">
+        <h1>Work in progress <span>.</span><span>.</span><span>.</span></h1>
+    </section>
     
 
 
-
-    <script src="./js/grid.js"></script>
-    <script src="./js/scroll.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/grid.js"></script>
+    <script src="./js/boxApear.js"></script>
+    
 </body>
 </html>
 

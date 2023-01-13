@@ -12,7 +12,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     overflow-x: hidden;
 }
 body, html {
@@ -24,6 +23,7 @@ body, html {
     background-size: 200%;
     font-family: var(--font-basic);
     color: #fff;
+    scroll-behavior: smooth;
 }
 
 @keyframes background-pan {
@@ -150,8 +150,10 @@ body, html {
 .mySkills {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 3rem 10vw;
+    padding: 10rem 10vw 3rem;
     z-index: 3;
+    gap: 1rem;
+    overflow: hidden;
 }
 
 .mySkills h1 {
@@ -182,16 +184,18 @@ body, html {
 
 .mySkills .box {
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
     margin: 1rem;
     border-image: linear-gradient( var(--primary-color), var(--secondary-color)) 30;
-    border-width: 1px;
+    border-width: 3px;
     border-style: solid;
-
+    z-index:    3;
+    background: var(--dark-color);
 }
 
 .mySkills .box * {
     margin: 1rem 0;
+
 }
 
 .mySkills .box h2 {
@@ -200,13 +204,210 @@ body, html {
     line-height: 1.5;
 }
 
+.mySkills .box h2::before,
+.mySkills .box h2::after  {
+    content: '<h2>';
+    display: flex;
+    font-family: var(--font-basic);
+    opacity: .3;
+
+}  
+
 .mySkills .box p {
     padding: 1rem 2rem;
+    font-size: 1.1rem;
 }
 
-.decorativeWord {
-    font-size: 20rem;
-    position: relative;
+.mySkills .box p::before,
+.mySkills .box p::after {
+    content: '<p>';
+    display: flex;
+    font-family: var(--font-basic);
+    opacity: .3;
+
+}
+
+/* behind title */
+
+.mySkills::before {
+    content: 'internet';
+    font-size: 10rem;
+    position: absolute;
+    font-family: var(--font-pixel);
+    opacity: .1;
     z-index: 1;
-    transform: translate(50%, -50%);
+    transform: translate(20vw, -10%);
+    
+}
+
+/* Checkbox menu */
+
+#experience {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+#experience h1 {
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    line-height: 1.3;
+    font-family: var(--font-pixel);
+}
+
+#experience h1 span {
+    animation-name: opacityChange;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes opacityChange {
+    0% {
+        opacity: 1;
+    }
+
+    89% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
+}
+#experience .exBox {
+    width: 60vw;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-color);
+    border-radius: .3rem;
+    margin: 1rem auto;
+}
+
+#experience .exBox  .clickbox {
+    width: 30px;
+    height: 30px;
+    color: rgb(0, 225, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(0, 225, 255);
+    border-radius: 50%;
+    padding: .3rem;
+    transition: .3s;
+}
+
+#experience .exBox .clickbox:hover {
+    transform: rotate(270deg);
+}
+
+#experience .exBox .clickbox:active {
+    transform: scale(1.1);
+}
+
+
+/* test */
+
+.test {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(3, 3, 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: var(--font-pixel);
+}
+
+.test span {
+    animation-name: dotBlink1;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.test span:nth-child(2) {
+    animation-name: dotBlink2;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.test span:last-child {
+    animation-name: dotBlink3;
+animation-duration: 3s;
+animation-timing-function: ease;
+animation-iteration-count: infinite;
+}
+
+@keyframes dotBlink1 {
+    0% {
+        opacity: 0;
+    }
+
+    29% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes dotBlink2 {
+    0% {
+        opacity: 0;
+    }
+
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes dotBlink3 {
+    0% {
+        opacity: 0;
+    }
+
+    69% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
 }

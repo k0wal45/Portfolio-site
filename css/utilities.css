@@ -25,7 +25,8 @@ a {
     color: inherit;
 }
 
-.test {
-    width: 100vw;
-    height: 100vh;
+
+
+.displayNone {
+    display: none;
 }
