@@ -26,11 +26,20 @@ a {
 }
 
 .active {
-    position: relative;
-    transform: scaleY(1)
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+}
+
+.slide {
+    transform: translateY(-50px);
+    max-height: 0;
+    transition: 0.35s ease-in;
+    overflow: hidden;
+
 }
 
 .hide {
     position: absolute;
-    transform: scaleY(.0);
+    transform: scale(0);
 }

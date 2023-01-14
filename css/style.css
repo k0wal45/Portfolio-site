@@ -309,6 +309,7 @@ body, html {
     background: var(--secondary-color);
     border-radius: .3rem;
     margin: .5rem auto;
+    z-index: 3;
 }
 
 #experience .disBox  .clickbox {
@@ -341,6 +342,7 @@ body, html {
     border-radius: .3rem;
     margin: 1rem auto;
     grid-template-columns: 4fr 1fr;
+    z-index: 1;    
 }
 
 #experience .exBox img {
@@ -385,6 +387,16 @@ body, html {
     font-size: 7rem;
 }
 
+#experience::before {
+    content: 'work';
+    font-size: 10rem;
+    position: absolute;
+    font-family: var(--font-pixel);
+    opacity: .1;
+    z-index: 1;
+    transform: translate(50vw, -10%);
+    
+}
 
 
 /* test */
