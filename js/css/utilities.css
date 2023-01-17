@@ -1,0 +1,51 @@
+.btn {
+    display:block;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+.bg-light {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+.bg-primary {
+    background: var(--primary-color);
+    color: var(--dark-color);
+}
+.bg-secondary {
+    background: var(--secondary-color);
+    color: var(--light-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.active {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+}
+
+.slide {
+    transform: translateY(-50px);
+    max-height: 0;
+    transition: 0.35s ease-in;
+    overflow: hidden;
+
+}
+
+.hide {
+    position: absolute;
+    transform: scale(0);
+}
+
+
+.appear {display: flex;}
+
+.hidden {display: none;}
