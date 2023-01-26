@@ -89,8 +89,8 @@ const colorChange5 = document.getElementById('color-5')
 
 colorChange5.onclick = function myFunction_set5() {
 
-  r.style.setProperty('--primary-color', 'rgba(241,0,255,1)');
-  r.style.setProperty('--secondary-color', 'rgba(0,106,255,1)');
+  r.style.setProperty('--primary-color', 'rgb(255, 187, 0)');
+  r.style.setProperty('--secondary-color', 'rgb(81, 81, 81)');
 }
 
 // black and white 
@@ -121,37 +121,4 @@ colorChangeWB.onclick = function myFunction_setWB() {
 
   
 }
-
-
-
-// settings bar
-
-const displaySettingsButton = document.getElementById('settings-bar-btn')
-
-const SettingsBar = document.getElementById('settings-bar')
-  
-displaySettingsButton.onclick = function ColorbarChange() {
-
-// hide/show function
-  if (SettingsBar.classList.contains('hidden')) {
-    
-    
-      SettingsBar.classList.remove('hidden')
-
-      SettingsBar.classList.add('appear')
-    
-
-    
-
-  } else if (SettingsBar.classList.contains('appear')) {
-
-   
-      SettingsBar.classList.remove('appear')
-
-      SettingsBar.classList.add('hidden')
-    
-
-    }
-  }
-
 

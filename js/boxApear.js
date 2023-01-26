@@ -122,4 +122,29 @@ thirdButton.onclick = function thirdBoxF() {
 }
 
 
+// const phoneButton = document.getElementById('phoneBoxBtn');
+
+// const phoneBox = document.getElementById('phoneBox')
+
+
+// phoneButton.onclick = function phoneBoxF() {
+    
+//     if( phoneBox.classList.contains('hidden')) {
+    
+//         phoneBox.classList.remove('hidden')
+
+//         phoneBox.classList.add('appear')
+
+    
+//     } else if (phoneBox.classList.contains('appear')) {
+    
+//         phoneBox.classList.remove('appear')
+
+//         phoneBox.classList.add('hidden')
+        
+    
+//     }
+// }
+
+
 

@@ -5,6 +5,7 @@
     --light-color: #fff;
     --font-pixel: 'Press Start 2P', cursive;
     --font-basic: 'Titillium Web', sans-serif;
+    --font-weight: 300;
 
 }
 
@@ -24,6 +25,7 @@ body, html {
     font-family: var(--font-basic);
     color: var(--light-color);
     scroll-behavior: smooth;
+    font-weight: var(--font-weight);
 }
 
 @keyframes background-pan {
@@ -153,7 +155,7 @@ body, html {
     background: linear-gradient(90deg, rgba(246,255,13,1) 0%, rgba(255,0,221,1) 100%);
 }
 #navbar .settings ul li #color-bar li #color-5 {
-    background: linear-gradient(90deg, rgba(241,0,255,1) 0%, rgba(0,106,255,1) 100%);
+    background: linear-gradient(90deg, rgb(81, 81, 81) 0%, rgb(255, 187, 0) 100%);
 }
 
 
@@ -457,13 +459,80 @@ body, html {
     
 }
 
+/* partnerships */
+
+.partnerships {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.partnerships h1 {
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    line-height: 1.3;
+    font-family: var(--font-pixel);
+    padding-bottom: 3rem;
+}
+
+.partnerships h1 span {
+    animation-name: opacityChange;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.partnerships .partners {
+    display: flex;
+    justify-content: space-around;
+}
+.partnerships .partners a {
+    padding: 1rem;
+    border-image: linear-gradient( var(--primary-color), var(--secondary-color)) 30;
+    border-width: 3px;
+    border-style: solid;
+    background: rgb(13, 13, 13);
+}
+
+.partnerships .partners a img{
+    width: 10rem;
+}
+
 /* about */
 
 #about {
-    height: 100vh;
     display: grid;
     grid-template-columns: 2fr 3fr;
     padding: 3rem;
+}
+
+#about::before {
+    content: 'Life';
+    font-size: 10rem;
+    position: absolute;
+    font-family: var(--font-pixel);
+    opacity: .1;
+    z-index: 1;
+    transform: translate(45vw, -10%);
+    
+}
+
+#about h1 {
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    line-height: 1.3;
+    font-family: var(--font-pixel);
+    grid-column: 1 / span 2;
+    padding-bottom: 5rem;
+}
+
+#about h1 span {
+    animation-name: opacityChange;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 }
 
 #about .left-about {
@@ -475,7 +544,7 @@ body, html {
 }
 #about .left-about h2 {
     font-family: var(--font-pixel);
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 1.2;
     color: var(--primary-color);
 }
@@ -484,16 +553,207 @@ body, html {
     font-size: 1.3rem;
 }
 
-#about .left-about a {
-    font-family: var(--font-pixel);
-    color: var(--primary-color);
-    text-decoration: underline;
+#about .left-about form {
+    display: flex;
+    padding: .3rem;
+    padding-left: 1rem;
+    border-radius: 5rem;
+    justify-content: space-between;
+}
+#about .left-about form input:first-child {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 1em;
 }
 
-#about .right-about {
-    height: 100%;
-    width: 100%;
+
+
+#about .left-about form input:last-child {
+    background-color: var(--primary-color);
+    border: none;
+    width: 4.5rem;
+    padding: .7rem;
+    border-radius: 5rem;
+    color: var(--light-color);
+    cursor: pointer;
 }
+
+#about .left-about .contacts {
+    display: flex;
+    gap: 2rem;
+}
+
+#about .left-about .contacts a {
+    background: var(--primary-color);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color);
+
+}
+
+#about .left-about h4 {
+    color: rgb(125, 125, 125);
+    font-size: 1rem;
+}
+
+#about .left-about .contacts div {
+    display: none;
+    padding: 1rem;
+    border: var(--primary-color) solid 3px;
+}
+
+#about .left-about .contacts #mailbtnhover:hover ~ #email-addres {
+    display: flex;
+}
+
+#about .left-about .contacts #phoneBtn:hover ~ #phone-number {
+    display: flex;
+}
+
+
+#about .right-about  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about .right-about .box-about  {
+    width: 40vw;
+    height: 40vw;
+    background: var(--light-color);
+    border-radius: 0 15vw 0 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .right-about .box-about .box-in-about {
+    width: 12vw;
+    height: 12vw;
+    background: var(--primary-color);
+    position: absolute;
+    border-radius: 0 30%;
+    transition: 1s;
+}
+
+#about .right-about .box-about .box-in-about:nth-child(odd) {
+    background: var(--primary-color);
+}
+#about .right-about .box-about .box-in-about:nth-child(even) {
+    background: var(--secondary-color);
+}
+
+
+
+#about .right-about .box-about .leave1 {
+    transform: translate(-150%, -156%);
+
+}
+#about .right-about .box-about .leave2 {
+    transform: translate(170%, 110%);
+    border-radius: 30% 0;
+
+}
+#about .right-about .box-about .leave3 {
+    transform: translate(10%, -130%);
+    border-radius: 30% 0;
+}
+#about .right-about .box-about .leave4 {
+    transform: translate(20%, -40%);
+    width: 17vw;
+    height: 5vw;
+    border-radius: 1rem;
+    
+
+}
+#about .right-about .box-about .leave5 {
+    transform: translate(-120%, 10%);
+    width: 15vw;
+    height: 20vw;
+    border-radius: 3rem;
+
+}
+#about .right-about .box-about .leave6 {
+    transform: translate(15%, 80%);
+
+}
+#about .right-about .box-about .leave7 {
+    transform: translate(150%, -100%);
+
+}
+
+#about .right-about .box-about .box-in-about:hover {
+    scale: 1.2;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    padding: 1rem 10rem;
+    justify-content: space-between;
+    align-items: top;
+    background: rgb(7, 7, 7);
+    color: #fff;
+
+}
+
+footer div {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+footer .Email-footer form {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-left: 1rem;
+    border-left: solid 1px var(--primary-color);
+}
+
+footer .Email-footer form input:first-child {
+    width: 100%;
+    padding: .2rem;
+    font-size: 1rem;
+    background: transparent;
+    color: #fff;
+}
+
+footer .Email-footer form input:last-child {
+    padding: 1rem;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    width: 8rem;
+    color: #eee;
+}
+
+
+footer div ul li,
+footer .Email-footer p  {
+    filter: brightness(80%);
+}
+
+footer .menu-footer ul li:hover {
+    color: var(--primary-color);
+}
+
+.rights {
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    background: #000;
+}
+
+
+
+
 
 /* test */
 
