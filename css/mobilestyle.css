@@ -77,6 +77,11 @@ body, html {
     content: '';
 }
 
+.navbar ul li:last-child{
+    grid-column: 1/ span 2;
+}
+
+
 .navbar .settings #color-bar-btn {
     display: none;
 }

@@ -1,0 +1,27 @@
+
+body,html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    animation: background-pan 5s linear infinite;
+}
+.thank-box {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.thank-box a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.thank-box a:hover {
+    color: var(--primary-color);
+}
