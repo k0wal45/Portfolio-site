@@ -785,12 +785,13 @@ footer .Email-footer form {
     border-left: solid 1px var(--primary-color);
 }
 
-footer .Email-footer form input:first-child {
+footer .Email-footer form input, input {
     width: 100%;
     padding: .2rem;
     font-size: 1rem;
     background: transparent;
     color: #fff;
+    border: none;
 }
 
 footer .Email-footer form input:last-child {

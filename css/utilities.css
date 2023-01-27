@@ -49,3 +49,7 @@ a {
 .appear {display: flex;}
 
 .hidden {display: none;}
+
+.spamfilter {
+    display: none;
+}
