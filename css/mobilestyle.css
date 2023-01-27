@@ -1,0 +1,294 @@
+body, html {
+    background: var(--dark-color);
+    overflow-x: hidden;
+    width: 100vw;
+
+}
+/* utlities change */
+
+.active {
+    max-height: none;
+    transition: max-height 0.5s ease-in;
+    overflow-x: hidden;
+}
+
+.slide {
+    transform: translateY(-50px);
+    max-height: 0;
+    transition: 0.35s ease-in;
+    overflow: hidden;
+
+}
+
+.hide {
+    position: relative;
+    transform: scale(1);
+}
+
+
+.appear {display: flex;}
+
+.hidden {display: flex;}
+
+.content {
+    animation: background-pan 5s linear infinite;
+    background: linear-gradient(to right,
+        var(--secondary-color),
+        var(--primary-color),
+        var(--secondary-color));
+    background-size: 200%;
+    height: auto;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+#navbar {
+    position: relative;
+}
+.navbar {
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--dark-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+
+.navbar ul li a {
+    font-size: 1rem;
+    text-align: center;
+}
+
+#navbar ul li a::before {
+    content: '';
+}
+
+.navbar .settings #color-bar-btn {
+    display: none;
+}
+
+.tile:hover:before {
+    opacity: 1;
+    transition: 0s;
+}
+
+.navbar .settings #color-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 0;
+    position: relative;
+    margin: 0;
+    border: none;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;   
+}
+
+.navbar .settings #color-bar li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .settings #color-bar li:nth-last-child(2) {
+    display: none;
+}
+
+.content #title {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    line-height: 1;
+    justify-content: center;
+text-align: center;
+    
+}
+
+.content #title>.fancy {
+    line-height: 1.2;
+    margin-top: 2rem;
+}
+
+.mySkills {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+}
+.mySkills h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mySkills h1 span {
+    display: none;
+}
+
+.mySkills::before {
+    font-size: 3rem;
+    transform: translate(20vw, 50%);
+}
+
+.mySkills .box {
+    margin: 0;
+    border-image: linear-gradient(to right, var(--primary-color), var(--secondary-color)) 1;
+    border-width: 10px;
+    border-style: solid;
+    border-bottom: 0 solid;
+}
+
+.mySkills .box:last-child {
+    border-bottom: 10px solid;
+}
+
+#experience {
+    margin-top: 2rem;
+}
+#experience h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#experience h1 span {
+    display: none;
+}
+
+#experience::before {
+    font-size: 3rem;
+    transform: translate(60vw, 50%);
+}
+
+#experience .disBox {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    border-radius: 0px;
+}
+
+#experience .disBox .clickbox {
+    display: none;
+}
+
+#experience .exBox {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#experience .exBox .logo {
+    display: none;
+}
+
+#experience .exBox ul:last-child li {
+    margin: .5rem;
+}
+
+.partnerships {
+    padding: 0;
+}
+
+.partnerships h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+.partnerships h1 span {
+    display: none;
+}
+
+.partnerships .partners {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr); 
+}
+
+#about {
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#about h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#about h1 span {
+    display: none;
+}
+
+#about::before {
+    display: none;
+}
+#about h1::before {
+    content: 'Life';
+    font-size: 3rem;
+    position: absolute;
+    font-family: var(--font-pixel);
+    opacity: .1;
+    z-index: 1;
+    transform: translate(45vw, 100%);
+}
+
+#about .right-about {
+    display: none;
+}
+
+#about .left-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .left-about h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#about .left-about form {
+    width: 90%;
+}
+
+#about .left-about form input:first-child  {
+    font-size: .8rem;
+}
+
+footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer ul li {
+    list-style: none
+    
+}
+
+.rights {
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+}

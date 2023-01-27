@@ -13,7 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    
 }
 body, html {
     animation: background-pan 10s linear infinite;
@@ -26,6 +26,7 @@ body, html {
     color: var(--light-color);
     scroll-behavior: smooth;
     font-weight: var(--font-weight);
+    overflow-x: hidden;
 }
 
 @keyframes background-pan {
@@ -90,6 +91,10 @@ body, html {
 
 .navbar h2 span:nth-child(odd) {
     color: var(--primary-color);
+}
+
+#navbar ul li a::before {
+    content: '// ';
 }
 
 #navbar ul li {
@@ -429,11 +434,13 @@ body, html {
     color: var(--secondary-color);
 }
 
+
 #experience .exBox ul:last-child li {
     padding: .5rem 1rem;
     background: var(--secondary-color);
     border-radius: 3rem;
     margin-right: 1rem;
+    margin-top: 1rem;
 }
 
 #experience .exBox .text span {
@@ -637,14 +644,24 @@ body, html {
     background: var(--primary-color);
     position: absolute;
     border-radius: 0 30%;
-    transition: 1s;
+    transition: 1s all;
+    font-family: var(--font-basic);
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+    
 }
 
 #about .right-about .box-about .box-in-about:nth-child(odd) {
     background: var(--primary-color);
+    color: var(--primary-color);
 }
 #about .right-about .box-about .box-in-about:nth-child(even) {
     background: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 
@@ -653,22 +670,54 @@ body, html {
     transform: translate(-150%, -156%);
 
 }
+
+#about .right-about .box-about .leave1:hover {
+    background: var(--primary-color);
+    border: 10px solid var(--secondary-color);
+    transition: 1s;
+    color: var(--secondary-color);
+}
+
+
 #about .right-about .box-about .leave2 {
     transform: translate(170%, 110%);
     border-radius: 30% 0;
 
 }
+
+#about .right-about .box-about .leave2:hover {
+    background: var(--primary-color);
+    border: 10px solid var(--secondary-color);
+    transition: 1s;
+    color: var(--secondary-color);
+}
+
 #about .right-about .box-about .leave3 {
     transform: translate(10%, -130%);
     border-radius: 30% 0;
 }
+
+#about .right-about .box-about .leave3:hover {
+    background: var(--secondary-color);
+    border: 10px solid var(--primary-color);
+    transition: 1s;
+    color: var(--primary-color);
+}
+
 #about .right-about .box-about .leave4 {
     transform: translate(20%, -40%);
     width: 17vw;
     height: 5vw;
     border-radius: 1rem;
-    
 
+}
+
+#about .right-about .box-about .leave4:hover {
+    content: 'Daniel Kowalski';
+    background: transparent;
+    border: 4px solid var(--primary-color);
+    
+    color: var(--dark-color);
 }
 #about .right-about .box-about .leave5 {
     transform: translate(-120%, 10%);
@@ -677,13 +726,33 @@ body, html {
     border-radius: 3rem;
 
 }
+#about .right-about .box-about .leave5:hover {
+    background: var(--secondary-color);
+    border: 10px solid var(--primary-color);
+    transition: 1s;
+    color: var(--primary-color);
+}
+
 #about .right-about .box-about .leave6 {
     transform: translate(15%, 80%);
 
 }
+
+#about .right-about .box-about .leave6:hover {
+    background: var(--secondary-color);
+    border: 10px solid var(--primary-color);
+    transition: 1s;
+    color: var(--primary-color);
+}
 #about .right-about .box-about .leave7 {
     transform: translate(150%, -100%);
 
+}
+#about .right-about .box-about .leave7:hover {
+    background: var(--primary-color);
+    border: 10px solid var(--secondary-color);
+    transition: 1s;
+    color: var(--secondary-color);
 }
 
 #about .right-about .box-about .box-in-about:hover {
